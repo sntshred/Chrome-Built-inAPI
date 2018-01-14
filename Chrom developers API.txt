@@ -1,0 +1,33 @@
+
+const synth = window.speechSynthesis;
+const utterThis = new SpeechSynthesisUtterance("Hi everybody");
+synth.speak(utterThis);
+
+
+ --speech recognization
+const reco = new webkitSpeechRecognition();
+undefinedreco.lang='eng-US'
+reco.interimResults=false
+reco.onresult = event => handleResult(event)
+event => handleResult(event)
+
+-- Geo Location
+navigator.geolocation.getCurrentPosition((position)=>{
+    console.log(position);
+})
+
+
+--Notification API
+
+const notification = new Notification("I'm the custom notification ", {
+    body:"The custom notificaiton placeholder",
+    icon:'http://www.fnordware.com/superpng/pngtest16rgba.png'
+})
+
+--Battery API 
+navigator.getBattery().then((battery)=>{
+    console.log(battery.value);
+    
+},(value)=>{
+    console.log(value.value);
+})
